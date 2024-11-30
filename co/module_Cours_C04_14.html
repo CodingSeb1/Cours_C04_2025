@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Schéma d'architecture [C04 : Modéliser la cinématique des mécanismes]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2024-11-29 23:26" ></meta>
+		<link rel="start" href="module_Cours_C04.html" title="C04 : Modéliser la cinématique des mécanismes" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m43dh2za"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C04_14.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module expUc">
+		<div id="root"><header id="header"><h1><span>C04 : Modéliser la cinématique des mécanismes</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Schéma d'architecture</span></h2><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>La description d'un mécanisme sous forme de graphe de liaisons ne permet pas de visualiser la position des solides et des liaisons dans l'espace. Le schéma d'architecture offre cette possibilité et complète ainsi le graphe de liaisons dans la mesure où les liaisons sont positionnées dans l'espace en situation de fonctionnement.</p></div></div></div><div class="method pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Méthode</span></i><span class="hidden"> : </span><span class="title">Tracé d'un schéma d'architecture</span></span></h3><div class="pBk_co"><div class="rBk "><p><strong class="txt_emp_is ">1</strong> - <strong class="txt_emp_is ">Identifier les classes d'équivalence</strong> du mécanisme.</p></div><div class="rBk "><p><strong class="txt_emp_is ">2</strong> - <strong class="txt_emp_is ">Elaborer le graphe des liaisons</strong> du mécanisme en identifiant complétement les liaisons entre les classes d'équivalence, c'est à dire en donnant leurs désignations normalisées complètes avec leurs caractéristiques géométriques : centre, axe, normale, direction, etc.</p></div><div class="rBk "><p><strong class="txt_emp_is ">3</strong> - Dans le repère de référence, <strong class="txt_emp_is ">tracer les éléments caractéristiques des liaisons</strong> (centres, normales, axes...) en respectant leurs dispositions relatives (concourance, parallélisme, perpendicularité, proportions...).</p></div><div class="rBk "><p><strong class="txt_emp_is ">4</strong> -<strong class="txt_emp_is "> Tracer les symboles normalisés</strong> de toutes les liaisons du mécanisme recensées dans le graphe des liaisons dans la bonne orientation en respectant les couleurs choisies pour chaque classe d'équivalence.</p></div><div class="rBk "><p><strong class="txt_emp_is ">5</strong> - <strong class="txt_emp_is ">Relier les liaisons</strong> entre elles par des traits qui modélisent chaque classe d'équivalence. Celles-ci sont donc représentées de façon filaire donc sans tenir compte de leurs épaisseurs.</p></div><div class="rBk "><p><strong class="txt_emp_is ">6 </strong>- <strong class="txt_emp_is ">Ajouter le symbole du bâti</strong> et <strong class="txt_emp_is ">les repères</strong> des différentes classes d'équivalence.</p></div><div class="rBk "><p><strong class="txt_emp_is ">7</strong> -<strong class="txt_emp_is "> Vérifier la cohérence générale</strong> du schéma par rapport au fonctionnement du mécanisme réel. On doit reconnaître le mécanisme et le « voir » s'animer.</p></div></div></div><div class="remark pBk noTitle"><h3 class="pBk_ti"><span><i class="type"><span class="label">Remarque</span></i><span class="hidden"> : </span><span class="title" ></span></span></h3><div class="pBk_co"><div class="rBk "><ol class="txt_ol "><li class="txt_oli "><p>Les liaisons normalisées utilisées <strong class="txt_emp_is ">pour le tracé d'un schéma d'architecture</strong> sont, dans la mesure du possible, des <strong class="txt_emp_is ">liaisons élémentaires</strong>.</p></li><li class="txt_oli "><p>Un schéma d'architecture se représente <strong class="txt_emp_is ">en couleurs</strong>. Les rapports de jury déplorent chaque année le non respect de cette règle par certains candidats aux concours.</p></li><li class="txt_oli "><p>Le programme national n'évoque pas le schéma d'architecture ou un équivalent. Il constitue un <strong class="txt_emp_is ">intermédiaire à la réalisation du schéma cinématique</strong> d'un mécanisme. Nous l'utiliserons cependant fréquemment dans le cadre des études statiques afin de mieux comprendre la répartition des actions mécaniques dans les liaisons. Dans ce type d'étude, il sera alors nécessaire de compléter le schéma d'architecture en indiquant les paramètres dimensionnels et géométriques nécessaires aux calculs.</p></li></ol></div></div></div><div class="example pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Exemple</span></i><span class="hidden"> : </span><span class="title">Schéma d'architecture du micromoteur de modélisme</span></span></h3><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Micromot_Sch_Archi.PNG" width="450" height="329" alt="" ></img></div></figure></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_1cm.PNG" width="78" height="59" alt="" ></img></div></figure></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C04_13.html" class="btnNav prev" title="Précédent (Graphe des liaisons (ou graphe de structure))"><span>Précédent</span></a></li><li class="pageNext"><a rel="next" target="_self" href="module_Cours_C04_15.html" class="btnNav next" title="Suivant (Association de liaisons)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="21"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C04_1.html"><a href="module_Cours_C04_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 intro"><div class="lbl type_l" id="module_Cours_C04_2.html"><a href="module_Cours_C04_2.html" target="_self" class="item"><span>Introduction</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_3.html"><a href="module_Cours_C04_3.html" target="_self" class="item"><span>Modélisation du contact entre deux solides</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_4.html"><a href="module_Cours_C04_4.html" target="_self" class="item" type="up"><span>Modélisation cinématique d'un mécanisme</span></a></div><ul class="sub mnu_open"><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_11.html"><a href="module_Cours_C04_11.html" target="_self" class="item"><span>Notion de mécanisme</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_12.html"><a href="module_Cours_C04_12.html" target="_self" class="item"><span>Notion de classe d'équivalence</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_13.html"><a href="module_Cours_C04_13.html" target="_self" class="item"><span>Graphe des liaisons (ou graphe de structure)</span></a></div></li><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_14.html"><span class="item"><span>Schéma d'architecture</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_15.html"><a href="module_Cours_C04_15.html" target="_self" class="item"><span>Association de liaisons</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_16.html"><a href="module_Cours_C04_16.html" target="_self" class="item"><span>Schéma cinématique : démarche de réalisation</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_17.html"><a href="module_Cours_C04_17.html" target="_self" class="item"><span>Exploitation du schéma cinématique : la loi entrée/sortie</span></a></div></li></ul></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_5.html"><a href="module_Cours_C04_5.html" target="_self" class="item"><span>Modélisations particulières</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_6.html"><a href="module_Cours_C04_6.html" target="_self" class="item"><span>Prise en compte du jeu dans les liaisons réelles : torseur des petits déplacements</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C04_7.html"><a href="module_Cours_C04_7.html" target="_self" class="item"><span>Notion d'hyperstatisme</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C04.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script></body></html>

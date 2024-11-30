@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Association de liaisons [C04 : Modéliser la cinématique des mécanismes]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2024-11-29 23:26" ></meta>
+		<link rel="start" href="module_Cours_C04.html" title="C04 : Modéliser la cinématique des mécanismes" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m43dh2za"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C04_15.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module expUc">
+		<div id="root"><header id="header"><h1><span>C04 : Modéliser la cinématique des mécanismes</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Association de liaisons</span></h2><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Lorsqu'on rencontre une disposition de liaisons en série ou en parallèle, la liaison équivalente est identifiée en calculant son torseur cinématique. Si la liaison obtenue est normalisée, on peut alors simplifier la modélisation en remplaçant les deux liaisons initiales par une liaison unique.</p></div></div></div><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Liaisons en série</span></h3><div class="hBk_co "><div class="basic pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Fondamental</span></i><span class="hidden"> : </span><span class="title">Association de liaisons en série</span></span></h4><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Lserie_Leq.PNG" width="450" height="75" alt="" ></img></div></figure></div><div class="rBk "><p>La liaison équivalente entre 0 et 2 se détermine par <strong class="txt_emp_is ">composition des torseurs cinématiques</strong> :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[ \boxed{ \quad \left \{ \mathcal V _{L_{eq}} \right \} =\left \{ \mathcal V _{L_{2/1}} \right \} +\left \{ \mathcal V _{L_{1/0}} \right \} \quad}\]</span></div></figure></div></div></div><div class="warning pBk noTitle"><h4 class="pBk_ti"><span><i class="type"><span class="label">Attention</span></i><span class="hidden"> : </span><span class="title" ></span></span></h4><div class="pBk_co"><div class="rBk "><p>La simplification de liaisons en série ne doit pas être systématique. Elle n'est pertinent que lorsque la classes d'équivalente intermédiaire (qui disparaît donc de la modélisation) ne présente pas d'intérêt cinématique.</p></div></div></div><div class="example pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Exemple</span></i><span class="hidden"> : </span><span class="title">Pompe à pistons axiaux</span></span></h4><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><a href="../res/Lserie_exemple.PNG" class="imgZoom" target="_blank" onclick="scImageMgr.loading(); return false;" title="Cliquez pour agrandir (nouvelle fenêtre)"><img src="../res/Lserie_exemple_1.PNG" width="630" height="112" alt="" ></img></a></div></figure></div><div class="rBk "><p>L'étude de la pompe à pistons axiaux met en évidence des liaisons en série entre les pistons, les patins et le plan incliné. Les patins permettent de répartir les efforts exercés par les pistons sur le plan incliné afin de diminuer la pression de contact pouvant endommager localement les pièces. En effet, sans eux, le contact entre un piston et le plan incliné serait ponctuel alors qu'ici, ce contact ponctuel est remplacé par deux contacts surfaciques : l'un sphérique, l'autre plan.</p><p>D'un point de vue cinématique, on peut montrer que ces patins n'ont pas d'intérêt. Pour s'en convaincre, on peut calculer la liaison équivalente à l'association en série d'une liaison sphérique et d'une liaison appui plan. Le torseur cinématique de la liaison équivalente s'obtient en additionnant celui de la liaison sphérique et celui de la liaison appui-plan en s'assurant qu'ils sont exprimés <strong class="txt_emp_is ">au même point</strong> (et <strong class="txt_emp_is ">dans la même base</strong> si l'on utilise les notations colonnes) :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\begin{matrix}
+\left \{ \mathcal V _{L_{eq}} \right \}  =  \left \{ \mathcal V _{L_{2/1}} \right \} +\left \{ \mathcal V _{L_{1/0}} \right \} 
+ &amp;
+\Leftrightarrow 
+&amp;
+ \quad \left \{ \mathcal V _{L_{eq}} \right \} 
+&amp; 
+= 
+&amp; 
+{\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{A} 
+\begin{Bmatrix} \omega_{x}^{21} &amp; 0 \\ \omega_{y}^{21}&amp; 0 \\ \omega_{z}^{21} &amp; 0 \end{Bmatrix} _{(\vec {x_1}, \vec {y_1}, \vec {z_1})}
++
+ {\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{A} 
+\begin{Bmatrix} \omega_{x}^{10} &amp; 0\\ 0 &amp; V_{y}^{10}\\ 0 &amp; V_{z}^{10}\end{Bmatrix} _{(\vec {x_1}, \vec {y_1}, \vec {z_1})}&amp; 
+\\
+&amp;
+\Leftrightarrow 
+&amp;
+ \quad \left \{ \mathcal V _{L_{eq}} \right \} 
+&amp; 
+=
+ &amp; 
+ {\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{A} 
+\begin{Bmatrix}  \omega_{x}^{21}+ \omega_{x}^{10} &amp; 0 \\ \omega_{y}^{21}  &amp; V_{y}^{10} \\ \omega_{z}^{21}  &amp; V_{z}^{10}\end{Bmatrix} _{(\vec {x_1}, \vec {y_1}, \vec {z_1})} 
+\\
+\end{matrix}\]</span></div></figure></div><div class="rBk "><p>Ainsi <span class="txt_mathtex_tl "><span>\(\left \{ \mathcal V _{L_{eq}} \right \}\)</span></span> est de la forme : <span class="txt_mathtex_tl "><span>\({\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{A}\begin{Bmatrix} \omega_{x_{eq}} &amp; 0 \\ \omega_{y_{eq}} &amp; V_{y_{eq}} \\ \omega_{z_{eq}} &amp; V_{z_{eq}}\end{Bmatrix} _{(\vec {x_1}, \vec {y_1}, \vec {z_1})}\)</span></span></p><p><strong class="txt_emp_is ">Conclusion :</strong> la liaison équivalente du piston <span class="txt_mathtex_tl "><span>\(2\)</span></span> par rapport au plan incliné <span class="txt_mathtex_tl "><span>\(0\)</span></span> est donc une liaison <strong class="txt_emp_is ">sphère plan de centre <span class="txt_mathtex_tl "><span>\(A\)</span></span> et de normale <span class="txt_mathtex_tl "><span>\(\vec x_1\)</span></span>.</strong></p></div><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Lserie_conclusion_2025.png" width="338" height="116" alt="" ></img></div></figure></div><div class="rBk "><p>Ainsi, dans un objectif purement cinématique d'étude des mouvements, les patins peuvent être omis de l'étude et on remplace alors dans le graphe des liaisons l'association en série des deux liaisons par une seule liaison sphère plan.</p></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_05cm.PNG" width="1" height="1" alt="" ></img></div></figure></div></div></div><div class="warning pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Attention</span></i><span class="hidden"> : </span><span class="title">Addition de deux torseurs</span></span></h4><div class="pBk_co"><div class="rBk "><p>Pour pouvoir <strong class="txt_emp_is ">additionner</strong> les composantes de deux torseurs, ceux-ci doivent être réduits au même point (et leurs composantes exprimées dans la même base lors de l'utilisation des notations en colonnes). Dans l'exemple ci-dessus, le torseur de la liaison appui plan ayant la même forme en tout point de l'espace, on peut choisir de l'exprimer directement au point A. Mais bien souvent, le calcul d'une liaison équivalente nécessite de déplacer un des deux torseurs. Dans ce cas il est plus efficace de déplacer <strong class="txt_emp_is ">le torseur ayant le moins de composantes non nulles</strong> (= torseur ayant le plus de composantes nulles) afin de simplifier les calculs.</p></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_05cm.PNG" width="1" height="1" alt="" ></img></div></figure></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Liaisons en parallèle</span></h3><div class="hBk_co "><div class="basic pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Fondamental</span></i><span class="hidden"> : </span><span class="title">Association de liaisons en parallèle</span></span></h4><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Lparallele.PNG" width="450" height="86" alt="" ></img></div></figure></div><div class="rBk "><p>La liaison équivalente entre <span class="txt_mathtex_tl "><span>\(1\)</span></span> et <span class="txt_mathtex_tl "><span>\(0\)</span></span> doit autoriser les mêmes mouvements que les deux liaisons initiales. Le torseur de la liaison équivalente se détermine alors en <strong class="txt_emp_is ">égalisant les torseurs cinématiques</strong> :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[ \boxed{ \quad \left \{ \mathcal V _{L_{eq}} \right \} =\left \{ \mathcal V _{L_{1/0}} \right \} = \left \{ \mathcal V _{L'_{1/0}} \right \} \quad}\]</span></div></figure></div></div></div><div class="example pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Exemple</span></i><span class="hidden"> : </span><span class="title">Micromoteur de modélisme</span></span></h4><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><a href="../res/Lparallele_exemple.PNG" class="imgZoom" target="_blank" onclick="scImageMgr.loading(); return false;" title="Cliquez pour agrandir (nouvelle fenêtre)"><img src="../res/Lparallele_exemple_1.PNG" width="630" height="118" alt="" ></img></a></div></figure></div><div class="rBk "><p>Le guidage en rotation du vilebrequin par rapport au carter est assuré par deux liaisons élémentaires en parallèle : un liaison pivot glissant permettant de définir l'axe de rotation et une liaison appui plan dont la normale correspond à l'axe de la liaison pivot glissant afin de définir la position axial du vilebrequin par rapport au carter.</p><p>La liaison équivalente entre <span class="txt_mathtex_tl "><span>\(1\)</span></span> et <span class="txt_mathtex_tl "><span>\(2\)</span></span> doit autoriser les mêmes mouvements que les deux liaisons en parallèle :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\begin{matrix}
+\left \{ \mathcal V _{L_{eq}} \right \} =\left \{ \mathcal V _{L_{1/0}} \right \} = \left \{ \mathcal V _{L'_{1/0}} \right \}
+\\
+\text{Or  : } 
+\left \{ \mathcal V _{L_{1/0}} \right \} 
+=
+{\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{O} 
+\begin{Bmatrix} 0 &amp; V_{x}\\ 0 &amp; V_{y} \\ \omega_{z} &amp; 0\end{Bmatrix} _{(\vec {x_0}, \vec {y_0}, \vec {z_0})} 
+ \text{ et } 
+\left \{ \mathcal V _{L'_{1/0}} \right \} 
+=
+{\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{O} 
+\begin{Bmatrix} 0 &amp; 0\\ 0 &amp; 0 \\ \omega'_{z} &amp; V'_{z}\end{Bmatrix} _{(\vec {x_0}, \vec {y_0}, \vec {z_0})} 
+\\
+\text{Donc, }
+\left \{ \mathcal V _{L_{1/0}} \right \} = \left \{ \mathcal V _{L'_{1/0}} \right \} 
+\Leftrightarrow 
+\left \{
+   \begin{array}{r c l}
+      \omega_{z}   &amp; = &amp; \omega'_{z}  \\
+      V_{x}  &amp; = &amp; 0 \\
+      V_{y}  &amp; = &amp; 0 \\
+      V'_{z}  &amp; = &amp; 0 \\
+   \end{array}
+   \right .
+\\
+\text{Soit : }
+\boxed{ \left \{ \mathcal V _{L_{eq}} \right \} 
+=
+{\vphantom{\begin{Bmatrix} \omega_x &amp; V_x \\ \omega_y &amp; V_y \\ \omega_z &amp; V_z\end{Bmatrix} }}_{O} 
+\begin{Bmatrix} 0 &amp; 0\\ 0 &amp; 0 \\ \omega'_{z} &amp; 0 \end{Bmatrix} _{(\vec {x_0}, \vec {y_0}, \vec {z_0})} }
+
+\end{matrix}\]</span></div></figure></div><div class="rBk "><p><strong class="txt_emp_is ">Conclusion :</strong> la liaison équivalente du vilebrequin <span class="txt_mathtex_tl "><span>\(1\)</span></span> par rapport au carter <span class="txt_mathtex_tl "><span>\(0\)</span></span> est donc une liaison <strong class="txt_emp_is ">pivot d'axe <span class="txt_mathtex_tl "><span>\((O,\vec z_0)\)</span></span></strong>.</p></div><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Lparallele_conclusion.PNG" width="387" height="111" alt="" ></img></div></figure></div></div></div><div class="warning pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Attention</span></i><span class="hidden"> : </span><span class="title">Egalisation de deux torseurs</span></span></h4><div class="pBk_co"><div class="rBk "><p>Pour pouvoir <strong class="txt_emp_is ">égaliser</strong> les composantes de deux torseurs, ceux-ci doivent être réduits au même point (et leurs composantes exprimées dans la même base lors de l'utilisation des notations en colonnes). Dans l'exemple ci-dessus, le torseur de la liaison appui plan ayant la même forme en tout point de l'espace, on peut choisir de l'exprimer directement en un point de l'axe de la liaison pivot, par exemple au point O. Mais bien souvent, le calcul d'une liaison équivalente nécessite de déplacer un des deux torseurs. Dans ce cas il est plus efficace de déplacer le torseur ayant <strong class="txt_emp_is ">le moins de composantes non nulles</strong> (= torseur ayant le plus de composantes nulles) afin de simplifier les calculs.</p></div></div></div><div class="example pBk"><h4 class="pBk_ti"><span><i class="type"><span class="label">Exemple</span></i><span class="hidden"> : </span><span class="title">Décomposition de liaisons</span></span></h4><div class="pBk_co"><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Decomposition_Lcomposees.png" width="540" height="275" alt="" ></img></div></figure></div><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><a href="../res/Decomposition_Lelementaires.png" class="imgZoom" target="_blank" onclick="scImageMgr.loading(); return false;" title="Cliquez pour agrandir (nouvelle fenêtre)"><img src="../res/Decomposition_Lelementaires_1.png" width="630" height="297" alt="" ></img></a></div></figure></div></div></div></div></section></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C04_14.html" class="btnNav prev" title="Précédent (Schéma d&apos;architecture)"><span>Précédent</span></a></li><li class="pageNext"><a rel="next" target="_self" href="module_Cours_C04_16.html" class="btnNav next" title="Suivant (Schéma cinématique : démarche de réalisation)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="21"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C04_1.html"><a href="module_Cours_C04_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 intro"><div class="lbl type_l" id="module_Cours_C04_2.html"><a href="module_Cours_C04_2.html" target="_self" class="item"><span>Introduction</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_3.html"><a href="module_Cours_C04_3.html" target="_self" class="item"><span>Modélisation du contact entre deux solides</span></a></div></li><li class="sel_no anc_yes type_b  dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_4.html"><a href="module_Cours_C04_4.html" target="_self" class="item" type="up"><span>Modélisation cinématique d'un mécanisme</span></a></div><ul class="sub mnu_open"><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_11.html"><a href="module_Cours_C04_11.html" target="_self" class="item"><span>Notion de mécanisme</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_12.html"><a href="module_Cours_C04_12.html" target="_self" class="item"><span>Notion de classe d'équivalence</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_13.html"><a href="module_Cours_C04_13.html" target="_self" class="item"><span>Graphe des liaisons (ou graphe de structure)</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_14.html"><a href="module_Cours_C04_14.html" target="_self" class="item"><span>Schéma d'architecture</span></a></div></li><li class="sel_yes anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_15.html"><span class="item"><span>Association de liaisons</span></span></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_16.html"><a href="module_Cours_C04_16.html" target="_self" class="item"><span>Schéma cinématique : démarche de réalisation</span></a></div></li><li class="sel_no anc_no type_l  dpt_1 expUc"><div class="lbl type_l" id="module_Cours_C04_17.html"><a href="module_Cours_C04_17.html" target="_self" class="item"><span>Exploitation du schéma cinématique : la loi entrée/sortie</span></a></div></li></ul></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_5.html"><a href="module_Cours_C04_5.html" target="_self" class="item"><span>Modélisations particulières</span></a></div></li><li class="sel_no anc_no type_b  type_b_c dpt_0 ueDiv"><div class="lbl type_b" id="module_Cours_C04_6.html"><a href="module_Cours_C04_6.html" target="_self" class="item"><span>Prise en compte du jeu dans les liaisons réelles : torseur des petits déplacements</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C04_7.html"><a href="module_Cours_C04_7.html" target="_self" class="item"><span>Notion d'hyperstatisme</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C04.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="ancestor"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script>
+		<script>/*<![CDATA[*/mathjaxMgr.init();/*]]>*/</script></body></html>
